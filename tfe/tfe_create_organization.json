@@ -1,0 +1,9 @@
+{
+    "data": {
+        "type": "organizations",
+        "attributes": {
+            "name": "test",
+            "email": "patrick.munne@ibm.com"
+        }
+    }
+} 
