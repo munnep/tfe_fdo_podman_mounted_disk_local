@@ -306,7 +306,7 @@ if [[ -z "${TUNNEL_NAME}" ]]; then
 fi
 
 
-LICENSE_FILE="${ROOT_DIR}/license_location/license.pem"
+LICENSE_FILE="${ROOT_DIR}/license_location/license.hclic"
 [[ -f "${CERTS_SCRIPT}" ]] || die "Missing script: ${CERTS_SCRIPT}"
 [[ -f "${CLOUDFLARED_SCRIPT}" ]] || die "Missing script: ${CLOUDFLARED_SCRIPT}"
 [[ -f "${COMPOSE_TEMPLATE}" ]] || die "Missing compose template: ${COMPOSE_TEMPLATE}"

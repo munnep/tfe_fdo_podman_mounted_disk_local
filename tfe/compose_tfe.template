@@ -12,7 +12,7 @@ spec:
     - name: "TFE_OPERATIONAL_MODE"
       value: "disk"
     - name: "TFE_LICENSE_PATH"
-      value: "/etc/ssl/private/terraform-enterprise/license.pem"
+      value: "/etc/ssl/private/terraform-enterprise/license.hclic"
     - name: "TFE_HOSTNAME"
       value: "__TFE_HOSTNAME__"
     - name: "TFE_HTTP_PORT"
@@ -54,7 +54,7 @@ spec:
     volumeMounts:
     - mountPath: "/etc/ssl/private/terraform-enterprise"
       name: "certs"
-    - mountPath: "/etc/ssl/private/terraform-enterprise/license.pem"
+    - mountPath: "/etc/ssl/private/terraform-enterprise/license.hclic"
       name: "tfe-license"
     - mountPath: "/var/log/terraform-enterprise"
       name: "log"
@@ -114,6 +114,6 @@ spec:
       type: "Directory"
     name: "cloudflared-creds"
   - hostPath:
-      path: "__PROJECT_ROOT__/license_location/license.pem"
+      path: "__PROJECT_ROOT__/license_location/license.hclic"
       type: "File"
     name: "tfe-license"

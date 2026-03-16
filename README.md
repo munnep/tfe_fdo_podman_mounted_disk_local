@@ -53,12 +53,12 @@ The current tunnel config forwards traffic to the local Terraform Enterprise con
 You must place the Terraform Enterprise license file at:
 
 ```text
-license_location/license.pem
+license_location/license.hclic
 ```
 
 The setup script checks that file before it starts the stack.
 
-The pod spec exposes that file to Terraform Enterprise through `TFE_LICENSE_PATH`.
+The pod spec exposes that file to Terraform Enterprise through `TFE_LICENSE_PATH` at `/etc/ssl/private/terraform-enterprise/license.hclic`.
 
 ## Architecture
 
@@ -77,7 +77,7 @@ High-level components:
 .
 ├── setup_tfe.sh
 ├── license_location/
-│   └── license.pem
+│   └── license.hclic
 ├── tfe/
 │   ├── certs/
 │   ├── cloudflared/
@@ -97,7 +97,7 @@ High-level components:
 
 ```bash
 mkdir -p license_location
-cp /path/to/your/license.pem license_location/license.pem
+cp /path/to/your/license.hclic license_location/license.hclic
 ```
 
 ### 2. Start the environment
